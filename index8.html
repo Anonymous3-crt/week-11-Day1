@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 9 - Remove Members</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 bg-slate-100 flex flex-col items-center min-h-screen">
+
+    <div class="max-w-sm w-full">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">Team Members</h2>
+
+      <ul id="teamList" class="space-y-2">
+        <li id="member1" class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-sm">Anuaru</li>
+        <li id="member2" class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-sm border-2 border-red-300">Bob (Removing...)</li>
+        <li id="member3" class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-sm">Tom</li>
+        <li id="member4" class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-sm border-2 border-red-300">Diana (Removing...)</li>
+        <li id="member5" class="bg-white rounded-lg px-4 py-2 shadow text-gray-700 text-sm">Abuoma</li>
+      </ul>
+    </div>
+
+    <script>
+     
+      const secondMember = document.getElementById('member2');
+      secondMember.remove();
+
+      const fourthMember = document.getElementById('member4');
+      fourthMember.remove();
+      const survivors = document.querySelectorAll('li');
+      survivors.forEach(member => {
+        member.classList.add('bg-green-50', 'border-green-200', 'border');
+      });
+    </script>
+
+  </body>
+</html>
