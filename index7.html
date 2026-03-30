@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 8 - Fruit List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 bg-white min-h-screen">
+
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Fruit List</h2>
+
+    <ul id="fruitList" class="space-y-2 max-w-xs"></ul>
+
+    <script>
+      const fruits = ["Mango", "Banana", "Pineapple", "Watermelon", "Orange"];
+
+    
+      const listContainer = document.getElementById('fruitList');
+
+    for(i = 0; i < fruits.length; i++){
+        li = document.createElement("li");
+        li.textContent = fruits[i];
+         li.classList.add(
+        "bg-gray-100",
+        "rounded-lg",
+        "px-4",
+        "py-2",
+        "text-gray-700",
+        "text-sm"
+        )
+        fruitList.appendChild(li);
+      }
+        listContainer.appendChild(li);
+      
+    </script>
+
+  </body>
+</html>
