@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 7 - Change the New Paragraph</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="p-10 bg-gray-50 flex justify-center">
+
+    <div id="card" class="bg-white rounded-2xl shadow p-6 max-w-sm w-full">
+      <h2 class="text-lg font-bold text-gray-800 mb-2">My Card</h2>
+      </div>
+
+    <script>
+   
+      const cardContainer = document.getElementById('card');
+      const newParagraph = document.createElement('p');
+      
+
+      newParagraph.textContent = "This paragraph was added by JavaScript.";
+      newParagraph.classList.add("text-gray-500", "text-sm", "mt-2");
+   
+      cardContainer.appendChild(newParagraph);
+
+   
+      newParagraph.textContent = "🚀 Wait! I just UPDATED the message!";
+    
+      newParagraph.style.color = "#16a34a"; 
+      newParagraph.style.fontWeight = "700"; 
+      newParagraph.style.fontSize = "16px"; 
+      
+      cardContainer.style.backgroundColor = "#ecfdf5"; 
+    </script>
+
+  </body>
+</html>
